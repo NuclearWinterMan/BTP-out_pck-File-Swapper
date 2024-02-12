@@ -63,7 +63,7 @@ public class Driver implements Runnable{
 	}
 	
 	public static void addWIPPanel(Container box) {
-		ImageIcon wipIcon = new ImageIcon("resources/WIP.png", "A red square with an X within it");
+		ImageIcon wipIcon = new ImageIcon("images/WIP.png", "A red square with an X within it");
 		
 		JLabel wipText = new JLabel("Under Construction", wipIcon, JLabel.CENTER);
 		wipText.setVerticalTextPosition(JLabel.BOTTOM);
