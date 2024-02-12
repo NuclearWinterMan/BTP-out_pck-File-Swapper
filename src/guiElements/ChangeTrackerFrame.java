@@ -64,7 +64,7 @@ public class ChangeTrackerFrame extends JInternalFrame {
 				outPckExportSetter.setApproveButtonText("Save");
 				outPckExportSetter.setMultiSelectionEnabled(false);
 				outPckExportSetter.setApproveButtonMnemonic(KeyEvent.VK_ENTER);
-				FileNameExtensionFilter pckFilter = new FileNameExtensionFilter("folter", "pck");
+				FileNameExtensionFilter pckFilter = new FileNameExtensionFilter("pck files", "pck");
 				outPckExportSetter.setFileFilter(pckFilter);
 				int outPckAnswer = outPckExportSetter.showSaveDialog(parentFrame);
 				if (outPckAnswer == JFileChooser.CANCEL_OPTION || outPckAnswer == JFileChooser.ERROR_OPTION) {
@@ -76,7 +76,7 @@ public class ChangeTrackerFrame extends JInternalFrame {
 				arm9ExportSetter.setApproveButtonText("Save");
 				arm9ExportSetter.setMultiSelectionEnabled(false);
 				arm9ExportSetter.setApproveButtonMnemonic(KeyEvent.VK_ENTER);
-				FileNameExtensionFilter binFilter = new FileNameExtensionFilter("falter", "bin");
+				FileNameExtensionFilter binFilter = new FileNameExtensionFilter("bin files", "bin");
 				arm9ExportSetter.setFileFilter(binFilter);
 				int arm9Answer = arm9ExportSetter.showSaveDialog(parentFrame);
 				if (arm9Answer == JFileChooser.CANCEL_OPTION || arm9Answer == JFileChooser.ERROR_OPTION) {

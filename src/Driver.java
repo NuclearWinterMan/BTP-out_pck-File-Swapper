@@ -1,4 +1,5 @@
 import fileHandling.FileHandler;
+import fileHandling.FileSelectionHandler;
 import guiElements.ReplacerFrame;
 
 import java.io.File;
@@ -30,10 +31,10 @@ public class Driver implements Runnable{
 		setLAF();
 		ReplacerFrame mainFrame = new ReplacerFrame();
 		//TODO uncomment this
-		//FileSelectionHandler.initialFileOpens(mainFrame);
+		FileSelectionHandler.initialFileOpens(mainFrame);
 		//Hardcoding values for testing purposes
-		FileHandler.setArm9BinFHandle(new File("arm9.bin"));
-		FileHandler.setOutPckFHandle(new File("_out.pck"));
+		//FileHandler.setArm9BinFHandle(new File("arm9.bin"));
+		//FileHandler.setOutPckFHandle(new File("_out.pck"));
 		
 		// Read game files from _out.pck
 		FileHandler.initOffsets();
