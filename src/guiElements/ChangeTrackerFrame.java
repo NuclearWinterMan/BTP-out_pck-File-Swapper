@@ -87,6 +87,21 @@ public class ChangeTrackerFrame extends JInternalFrame {
 				FileHandler.export(newOutPck, newArm9);
 			}
 		});
+		
+		remove.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int transactionId = transactionList.getSelectedIndex();
+				if (transactionId < 0) {
+					return;
+				}
+				if (transactionId >= FileHandler.numTransactions()) {
+					return;
+				}
+				FileHandler.removeTransaction(transactionId);
+			}
+		});
+		
 	}
 	
 	private void initLayout() {
@@ -97,7 +112,7 @@ public class ChangeTrackerFrame extends JInternalFrame {
 		c.gridy = 0;
 		c.fill = GridBagConstraints.BOTH;
 		c.gridheight = 1;
-		c.gridwidth = 1;
+		c.gridwidth = 2;
 		c.weightx = 1.0;
 		c.weighty = .5;
 		this.add(text1, c);
@@ -105,7 +120,10 @@ public class ChangeTrackerFrame extends JInternalFrame {
 		c.weighty = 4.0;
 		this.add(transactionScroller, c);
 		c.gridy = 2;
+		c.gridwidth = 1;
 		c.weighty = 1.0;
 		this.add(exporter, c);
+		c.gridx = 1;
+		this.add(remove, c);
 	}
 }

@@ -239,6 +239,15 @@ public class FileHandler {
 		return true;
 	}
 	
+	public static boolean removeTransaction(int transactionId) {
+		changes.remove(transactionId);
+		return true;
+	}
+	
+	public static int numTransactions() {
+		return changes.size();
+	}
+	
 	public static void testOpen() {
 		
 	}
